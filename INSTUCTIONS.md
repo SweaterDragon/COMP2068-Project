@@ -14,11 +14,11 @@
     x /routes.js
     x /controllers/SessionsController.js
     x /controllers/UsersController.js
-    - /controllers/coursesController.js 
+    x /controllers/coursesController.js 
     x /models/User.js
     x /models/Course.js
-    - /views/course/index.js
-    - /views/courses/show.js
+    x /views/course/index.js
+    x /views/courses/show.js
     x /views/courses/new.js
     x /views/courses/edit.js
     x /views/courses/_form.js

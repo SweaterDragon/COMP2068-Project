@@ -10,7 +10,7 @@
     <label for="tier">Tier</label>
     <select name="course" class="form-control">
       <option>Select a difficult tier</option>
-      <% for (let restaurant of restaurants) { %>
+      <% for (let tier of tiers) { %>
         <option <%= (tier === formData.tier) && 'selected' %> value="<%= tier %>"><%= tier %></option>
       <% } %>
     </select>

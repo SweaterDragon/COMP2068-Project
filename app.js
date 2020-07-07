@@ -25,9 +25,17 @@ mongoose.connect(process.env.DB_URI, {
 /*
   Step 3: Setup and configure Passport
 */
+const passport = require('passport');
+const session = require('express-session');
+app.use(session({
+  secret: 'any salty secret here',
+  resave: true,
+  saveUninitialized: false
+}));
+
 app.use(passport.initialize());
 app.use(passport.session());
-const User = require('./models/user');
+const User = require('./models/User');
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
